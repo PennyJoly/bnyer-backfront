@@ -150,6 +150,19 @@ export const constantRoutes = [
         meta: { title: '修改生成配置', activeMenu: '/tool/gen' }
       }
     ]
+  },
+  {
+    path: '/service/feedback',
+    component: Layout,
+    hidden: false,
+    children: [
+      {
+        path: 'index',
+        component: (resolve) => require(['@/views/service/feedback/index'], resolve),
+        name: 'feedback',
+        meta: { title: '问题反馈', activeMenu: '/service/feedback' }
+      }
+    ]
   }
 ]
 
